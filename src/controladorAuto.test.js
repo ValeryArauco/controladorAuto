@@ -26,5 +26,12 @@ describe("Validar que la posicion inicial siga el formato de la cadena -> mostra
     expect(resultado).toEqual(false);
   });
 
+  it("Deberia devolver true si el formato de la posicion inicial es correcto", () => {
+    
+    const comando = "5,5/1,2N/IAIAIAIAA";
+    const resultado = constroladorAuto.validarPosicionInicial(comando);
+    expect(resultado).toEqual(true);
+  });
+
 
 });

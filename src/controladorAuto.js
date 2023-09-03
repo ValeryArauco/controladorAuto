@@ -6,7 +6,9 @@ class ControladorAuto{
   }
 
   validarPosicionInicial(comandos){
-    return false;
+    const formatoValido = /^\d+,\d+[NEOSneos]$/;
+    const partes = comandos.split('/');
+    return formatoValido.test(partes[1]);
   }
 }
   
